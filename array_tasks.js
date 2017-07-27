@@ -10,24 +10,22 @@ var arrayTasks = {
 	},
 
 	square: function (arr) {
-		var newArr = arr.map(function(item){
+		return arr.map(function(item){
 			return item * item;
 		})
-		return newArr;
 	},
 
 	sum: function (arr) {
-		var total = arr.reduce(function(sum, value){
+		return arr.reduce(function(sum, value){
 			return sum + value;
 		}, 0)
-		return total;
 	},
 
 	findDuplicates: function (arr) {
 		var duplicates = [];
 		var sortedArray = arr.sort().map(function(number, index){
 			if (arr.indexOf(number, index + 1) > -1 && duplicates.indexOf(number) === -1){
-					duplicates.push(item);
+					duplicates.push(number);
 			};
 		})
 		return duplicates;
